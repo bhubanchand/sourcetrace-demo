@@ -1,138 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SourceTrace - Sustainable Agriculture</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SourceTrace - Sustainable Agriculture Solutions</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons (using CDN for simplicity) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header class="main-header">
+    <!-- 1. Global Navigation (Sticky Header) -->
+    <header class="main-header" id="mainHeader">
         <div class="container header-content">
-            <div class="logo"><a href="index.html">SOURCETRACE</a></div>
-            <nav>
+            <div class="logo">
+                <a href="index.html">SOURCETRACE</a>
+            </div>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li class="dropdown">
-                        <a href="solutions.html">SOLUTIONS</a>
-                        <div class="dropdown-content">
-                            <a href="agriculture-solutions.html">Agriculture Solutions</a>
-                            <a href="agricultural-value-chain.html">Agricultural Value Chain</a>
-                            <a href="carbon-farming.html">Carbon Farming</a>
-                            <a href="farm-traceability.html">Farm Traceability</a>
-                            <a href="farm-management.html">Farm Management</a>
-                            <a href="food-security.html">Food Security</a>
-                            <a href="supply-chain-management.html">Supply Chain Mgmt</a>
-                        </div>
-                    </li>
-                    <li><a href="customers.html">CUSTOMERS</a></li>
-                    <li class="dropdown">
-                        <a href="resources.html">RESOURCES</a>
-                        <div class="dropdown-content">
-                            <a href="media-publications.html">Media & Publications</a>
-                            <a href="case-studies.html">Case Studies</a>
-                            <a href="whitepapers.html">Whitepapers</a>
-                            <a href="webinars.html">Webinars</a>
-                        </div>
-                    </li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact-us.html">CONTACT US</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="customers.html">Customers</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class="social-icons">
-                <a href="request-a-demo.html" class="btn-primary" style="padding: 8px 16px; font-size; 12px;">REQUEST DEMO</a>
+            <div class="header-cta">
+                <a href="request-demo.html" class="btn btn-solid-green">REQUEST DEMO</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </header>
 
-    <!-- Home Hero -->
-    <section class="hero-section hero-animate" style="background-image: url('placeholder-hero.jpg');">
+    <!-- 2. Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg" style="background-image: url('assets/hero_bg.png');"></div>
         <div class="hero-overlay"></div>
-        <div class="container text-center">
-            <h1>LEADING DIGITAL AGRICULTURE, GLOBALLY</h1>
-            <p class="hero-text" style="margin: 0 auto; color: #ddd; font-weight: 300;">
-                WE MAKE GLOBAL SUPPLY CHAINS MORE EFFICIENT, TRANSPARENT AND SUSTAINABLE
-            </p>
-            <br>
-            <br>
-            <a href="contact-us.html" class="btn-primary">LEARN MORE</a>
+        <div class="container hero-content text-center">
+            <h1 class="hero-title animate-in">Digitizing Agriculture for a Sustainable Future.</h1>
+            <p class="hero-subtitle animate-in delay-1">Empowering smallholder farmers and agribusinesses with
+                full-chain visibility—from seed to shelf.</p>
+            <div class="hero-buttons animate-in delay-2">
+                <a href="#solutions" class="btn btn-primary pulse-btn">Start Your Transformation</a>
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank"
+                    class="btn btn-secondary-outline">Watch the Video ▶</a>
+            </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="bg-dark text-white">
+    <!-- 3. Social Proof (Trust Bar) -->
+    <section class="trust-bar section-padding-sm">
         <div class="container">
-            <div class="grid-4" style="text-align: center;">
-                <div>
-                    <h2 style="font-size: 36px; color: var(--primary-green);">37</h2>
-                    <p>Countries Deployed</p>
-                </div>
-                <div>
-                    <h2 style="font-size: 36px; color: var(--primary-green);">2M+</h2>
-                    <p>Farmers Impacted</p>
-                </div>
-                <div>
-                    <h2 style="font-size: 36px; color: var(--primary-green);">3M+</h2>
-                    <p>Hectares Monitored</p>
-                </div>
-                <div>
-                    <h2 style="font-size: 36px; color: var(--primary-green);">4</h2>
-                    <p>Continents</p>
+            <p class="trust-title text-center">Trusted by Global Leaders in Agriculture</p>
+            <div class="logo-carousel">
+                <div class="logo-track">
+                    <!-- Logos - Repeated for Infinite Scroll -->
+                    <div class="client-logo">Cargill</div>
+                    <div class="client-logo">Chetna Organic</div>
+                    <div class="client-logo">WorldFish</div>
+                    <div class="client-logo">SFACH</div>
+                    <div class="client-logo">Olam</div>
+                    <div class="client-logo">Ferrero</div>
+                    <!-- Duplicate for loop -->
+                    <div class="client-logo">Cargill</div>
+                    <div class="client-logo">Chetna Organic</div>
+                    <div class="client-logo">WorldFish</div>
+                    <div class="client-logo">SFACH</div>
+                    <div class="client-logo">Olam</div>
+                    <div class="client-logo">Ferrero</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DATAGREEN Platform -->
-    <section class="bg-cream">
+    <!-- 4. The Challenge vs Solution -->
+    <section class="challenge-solution section-padding">
+        <div class="container grid-2 align-center">
+            <div class="text-col fade-in-left">
+                <h2 class="section-heading">Bridging the Gap in the Last Mile.</h2>
+                <p class="section-body">
+                    Managing a scattered agricultural value chain is complex. Lack of data, low visibility, and manual
+                    processes lead to leakage and inefficiency.
+                    <br><br>
+                    <strong>SourceTrace DATAGREEN™</strong> brings every stakeholder onto one unified platform.
+                </p>
+            </div>
+            <div class="visual-col fade-in-right">
+                <div class="supply-chain-visual">
+                    <img src="assets/fragmented_supply_chain.png" alt="Fragmented Supply Chain"
+                        class="chain-img fragmented active">
+                    <img src="assets/connected_supply_chain.png" alt="Connected Supply Chain"
+                        class="chain-img connected">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Key Features -->
+    <section class="key-features section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">THE DATAGREEN PLATFORM</h2>
-            <div class="grid-2">
-                <div class="hero-animate">
-                    <p>DATAGREEN is our comprehensive digital platform integrating Mobile Apps, Blockchain, Remote Sensing, and AI. It bridges the gap between farmers and global markets.</p>
-                    <ul class="check-list">
-                        <li>Farm to Fork Traceability</li>
-                        <li>Supply Chain Efficiency</li>
-                        <li>Market Linkages</li>
-                        <li>Financial Services Integration</li>
-                    </ul>
+            <h2 class="section-heading text-center mb-60">Comprehensive Solutions</h2>
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card reveal-up">
+                    <div class="card-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>Farmer Profiling (KYC)</h3>
+                    <p>Capture complete socio-economic profiles, GPS location of farms, and family data to ensure
+                        targeted support and authentic sourcing.</p>
                 </div>
-                <!-- Placeholder for platform image -->
-                <div class="full-width-img" style="background: linear-gradient(135deg, #4a5d2e, #8dbf43);">
-                    <span style="color:white; font-size: 20px;">DATAGREEN VISUALIZATION</span>
+                <!-- Card 2 -->
+                <div class="feature-card reveal-up delay-1">
+                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Crop Advisory & Alerts</h3>
+                    <p>Send real-time pest, disease, and weather alerts directly to farmers’ mobile phones to mitigate
+                        risks and improve yield.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card reveal-up delay-2">
+                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Certification Management</h3>
+                    <p>Simplify compliance for Organic, Fairtrade, and Rainforest Alliance certifications with automated
+                        Internal Control Systems (ICS).</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="feature-card reveal-up">
+                    <div class="card-icon"><i class="fas fa-link"></i></div>
+                    <h3>Traceability & Blockchain</h3>
+                    <p>Guarantee provenance with farm-to-retail traceability. Generate QR codes that tell the full story
+                        of your produce.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="feature-card reveal-up delay-1">
+                    <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Farm-to-Fork Analytics</h3>
+                    <p>Visualize yield estimates, procurement data, and supply chain bottlenecks on a centralized,
+                        real-time dashboard.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="feature-card reveal-up delay-2">
+                    <div class="card-icon"><i class="fas fa-wallet"></i></div>
+                    <h3>Financial Services</h3>
+                    <p>Facilitate credit access, crop insurance, and digital payments directly to farmer bank accounts,
+                        ensuring financial inclusion.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container grid-4">
-            <div class="col">
-                <h4>Sourcetrace</h4>
-                <p>Digital solutions for sustainable agriculture.</p>
-            </div>
-            <div class="col">
-                <h4>Locations</h4>
-                <p>USA, India, Bangladesh</p>
-            </div>
-            <div class="col">
-                <h4>Contact</h4>
-                <p>info@sourcetrace.com</p>
-            </div>
-            <div class="col">
-                <h4>Follow Us</h4>
-                <p>Join our community on social media.</p>
+    <!-- 6. Deep Dive: CarbonTrace -->
+    <section class="carbontrace-section parallax-section"
+        style="background-image: url('assets/carbontrace_satellite.png');">
+        <div class="dark-overlay"></div>
+        <div class="container content-center text-center">
+            <span class="badge-new">New Feature</span>
+            <h2 class="text-white mb-20">Monitor Your Carbon Footprint.</h2>
+            <p class="text-white max-w-700 mx-auto mb-40">Leverage satellite imagery and ground data to measure carbon
+                sequestration. Verify your sustainability goals and unlock carbon credit revenue for farmers.</p>
+            <a href="carbontrace.html" class="btn btn-primary">Explore CarbonTrace</a>
+        </div>
+    </section>
+
+    <!-- 7. How It Works -->
+    <section class="how-it-works section-padding">
+        <div class="container">
+            <h2 class="section-heading text-center mb-60">How It Works</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <!-- Step 1 -->
+                <div class="timeline-item left reveal-up">
+                    <div class="timeline-content">
+                        <h3>1. Enrollment</h3>
+                        <p>Field agents register farmers and map plots using GPS on the SourceTrace App (Works Offline).
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="timeline-item right reveal-up">
+                    <div class="timeline-content">
+                        <h3>2. Cultivation</h3>
+                        <p>Farmers receive advisory; field staff monitor crop growth and input usage.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="timeline-item left reveal-up">
+                    <div class="timeline-content">
+                        <h3>3. Harvest & Procurement</h3>
+                        <p>Digital weighing and receipts are generated instantly at the collection center.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="timeline-item right reveal-up">
+                    <div class="timeline-content">
+                        <h3>4. Processing & Logistics</h3>
+                        <p>Produce is tracked through warehousing and transport with batch numbers.</p>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="timeline-item left reveal-up">
+                    <div class="timeline-content">
+                        <h3>5. Retail</h3>
+                        <p>Consumers scan a QR code to see the farmer's face and the journey of their food.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            © 2025 SourceTrace. All rights reserved.
+    </section>
+
+    <!-- 8. Impact Metrics -->
+    <section class="impact-metrics section-padding bg-dark text-white">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-number" data-target="1500000">0</div>
+                    <div class="metric-label">Farmers Impacted</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number" data-target="37">0</div>
+                    <div class="metric-label">Countries Deployed</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number" data-target="3000000">0</div>
+                    <div class="metric-label">Hectares Managed</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number" data-target="350">0</div>
+                    <div class="metric-label">Crops Tracked</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Testimonials -->
+    <section class="testimonials section-padding">
+        <div class="container max-w-900 text-center">
+            <div class="testimonial-slider">
+                <div class="slide active">
+                    <p class="quote-text">"SourceTrace allows us to keep track of productivity levels down to the Palm
+                        Tree level using mobile scale and GPS mapping. We now have precision agriculture data."</p>
+                    <div class="quote-author">
+                        <cite>— Jose Urgelles</cite>
+                        <span>Plantation Manager, DAPASA</span>
+                    </div>
+                </div>
+                <!-- Add more slides if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="main-footer bg-black text-grey section-padding-sm">
+        <div class="container grid-4 footer-grid">
+            <div class="footer-col">
+                <h4 class="footer-logo">SOURCETRACE</h4>
+                <p>Innovating Agriculture since 2013.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Solutions</h5>
+                <ul>
+                    <li><a href="agriculture-solutions.html">Agriculture</a></li>
+                    <li><a href="farm-traceability.html">Traceability</a></li>
+                    <li><a href="farm-management.html">Certification</a></li>
+                    <li><a href="carbontrace.html">CarbonTrace</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center copyright-row">
+            <p>&copy; 2025 SourceTrace. All rights reserved.</p>
         </div>
     </footer>
-<script src="main.js"></script></body>
+
+    <script src="main.js"></script>
+</body>
+
 </html>

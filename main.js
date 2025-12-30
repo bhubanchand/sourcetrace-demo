@@ -1,31 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for Scroll Animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, observerOptions);
-
-    // Elements to animate
-    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .card, .hero-text, .section-title');
-    revealElements.forEach(el => observer.observe(el));
-
-    // Header Scroll Effect
+// Sticky Header
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile Menu
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+
+// Scroll Animations (Reveal on Scroll)
+const revealElements = document.querySelectorAll('.reveal-up');
+
+const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    const elementVisible = 150;
+
+    revealElements.forEach((reveal) => {
+        const elementTop = reveal.getBoundingClientRect().top;
+        if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add('active');
         }
     });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+
+// Impact Metrics Counter Animation
+const counters = document.querySelectorAll('.metric-number');
+let hasAnimated = false;
+
+const animateCounters = () => {
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText.replace(/,/g, ''); // Remove commas if any
+        const increment = target / 200; // Speed
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment).toLocaleString(); // Add commas back
+            setTimeout(animateCounters, 10); // Loop
+        } else {
+            // Special formatting for millions/thousands can be done here if needed
+            if (target >= 1000000) {
+                counter.innerText = (target / 1000000) + 'M+';
+            } else if (target > 1000) {
+                counter.innerText = target.toLocaleString() + '+';
+            } else {
+                counter.innerText = target;
+            }
+        }
+    });
+};
+
+// Trigger counter animation when section is in view
+const metricsSection = document.querySelector('.impact-metrics');
+window.addEventListener('scroll', () => {
+    if (!hasAnimated && window.scrollY + window.innerHeight > metricsSection.offsetTop + 100) {
+        animateCounters();
+        hasAnimated = true;
+    }
 });
