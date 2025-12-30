@@ -1,0 +1,433 @@
+:root {
+    --primary-green: #8dbf43;
+    --dark-green: #4a5d2e;
+    --text-color: #333333;
+    --text-light: #777777;
+    --bg-cream: #f9f7f2;
+    --bg-dark: #2e3b28;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    padding: 20px 0;
+    background: var(--white);
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--dark-green);
+    font-weight: 700;
+}
+
+.main-header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.main-header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.social-icons a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: var(--primary-green);
+}
+
+/* Hero */
+.hero-section {
+    padding: 60px 0;
+}
+
+.hero-section h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    font-size: 16px;
+    /* Based on 'CARBONTRACE' smaller header style in image */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-text {
+    font-size: 14px;
+    max-width: 800px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.hero-subtext {
+    font-size: 14px;
+    max-width: 800px;
+    color: var(--text-light);
+}
+
+/* Sections General */
+section {
+    padding: 60px 0;
+}
+
+.bg-cream {
+    background-color: var(--bg-cream);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-green);
+    margin: 10px auto 0;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+/* Grids */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.grid-2-bias-left {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--dark-green);
+}
+
+.card p {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* Image Placeholders (Fallback Styles) */
+.card-img-placeholder {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-placeholder::after {
+    content: 'IMAGE';
+    opacity: 0.3;
+}
+
+#img-stakeholder-1 {
+    background: linear-gradient(to bottom right, #a8ff78, #78ffd6);
+}
+
+/* Farmer */
+#img-stakeholder-2 {
+    background: linear-gradient(to bottom right, #2980b9, #6dd5fa, #ffffff);
+}
+
+/* Data */
+#img-stakeholder-3 {
+    background: linear-gradient(to bottom right, #8360c3, #2ebf91);
+}
+
+/* Laptop */
+#img-stakeholder-4 {
+    background: linear-gradient(to bottom right, #f7971e, #ffd200);
+}
+
+/* Assessment */
+
+.content-card {
+    background: var(--white);
+    padding: 20px;
+}
+
+.content-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--dark-green);
+}
+
+/* Data Gap Image */
+.full-width-img {
+    width: 100%;
+    height: 300px;
+    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+    /* Using a reliable Unsplash direct link if possible, or just gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(to right, #11998e, #38ef7d);
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: var(--font-heading);
+}
+
+.card-img-rect {
+    width: 100%;
+    height: 180px;
+    background: #eee;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+}
+
+#img-who-1 {
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+/* Agri-food */
+#img-who-2 {
+    background: linear-gradient(to right, #84fab0, #8fd3f4);
+}
+
+/* Carbon Project */
+#img-who-3 {
+    background: linear-gradient(to right, #fccb90, #d57eeb);
+}
+
+/* Fund */
+
+/* Stakeholder Map */
+.illustration-container {
+    padding: 40px;
+    border: 2px dashed #ddd;
+    text-align: center;
+    background: #fdfdfd;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-content {
+    background: linear-gradient(to right, #232526, #414345);
+    min-height: 300px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: monospace;
+}
+
+
+.check-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.check-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.check-list li::before {
+    content: '•';
+    color: var(--primary-green);
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Stakeholder Map */
+/* Stakeholder Map (Styled above) */
+
+/* Why Section */
+.icon-box {
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icon-box .icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.icon-box h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.icon-box p {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* Satellite */
+.satellite-section h2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Image content styled globally */
+
+/* CTA */
+.cta-section {
+    background-color: var(--primary-green);
+    /* Using a bright green/yellow based on image logic, or could be the darker green overlay */
+    background: linear-gradient(rgba(100, 140, 60, 0.9), rgba(100, 140, 60, 0.9)), url('placeholder-field.jpg');
+    /* Simulated overlay */
+    background-color: #6c8c3e;
+    color: var(--white);
+    padding: 80px 0;
+}
+
+.cta-section h3 {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #dceea5;
+    /* Light yellowish green */
+    color: var(--dark-green);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+/* Footer */
+.main-footer {
+    padding: 40px 0 20px;
+    background: var(--white);
+    font-size: 13px;
+}
+
+.main-footer h4 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--dark-green);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .grid-4,
+    .grid-3,
+    .grid-2,
+    .grid-2-bias-left {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
